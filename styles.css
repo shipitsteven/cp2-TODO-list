@@ -1,0 +1,47 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #ffe0c0;
+}
+
+.icons {
+    height: 1em;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+h1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+    border-bottom: 5px solid grey;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    background-color: #10a7ff;
+    color: white;
+}
+#container {
+    margin: 5em auto;
+    width: 300px;
+    background: #f7f7f7;
+}
+
+input {
+    margin-top: 0px;
+    font-size: 18px;
+    color: lightgray;
+    box-sizing: border-box;
+    padding: 15px;
+    width: 100%;
+    border: 3px solid rgba(0,0,0,0);
+}
+
+span {
+    background: red;
+    text-align: center;
+    color: white;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+}
