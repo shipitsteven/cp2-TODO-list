@@ -1,85 +1,85 @@
 body {
-    font-family: 'Open Sans', sans-serif;
-    background: #ffe0c0;
+  font-family: 'Open Sans', sans-serif;
+  background: #ffe0c0;
 }
 
 h1 {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5em;
-    border-bottom: 5px solid grey;
-    text-transform: uppercase;
-    margin-bottom: 0;
-    background-color: #10a7ff;
-    color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em;
+  border-bottom: 5px solid grey;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  background-color: #10a7ff;
+  color: white;
 }
 
 #addSign {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 #container {
-    margin: 5em auto;
-    width: 300px;
-    background: #f7f7f7;
+  margin: 5em auto;
+  width: 300px;
+  background: #f7f7f7;
 }
 
 input {
-    margin-top: 0;
-    font-size: 18px;
-    color: darkgray;
-    box-sizing: border-box;
-    padding: 15px;
-    width: 100%;
-    border: 3px solid rgba(0, 0, 0, 0);
+  margin-top: 0;
+  font-size: 18px;
+  color: darkgray;
+  box-sizing: border-box;
+  padding: 15px;
+  width: 100%;
+  border: 3px solid rgba(0, 0, 0, 0);
 }
 
 input:focus {
-    background: white;
-    border: 3px solid #2980b9;
-    outline: none;
-    color: black;
+  background: white;
+  border: 3px solid #2980b9;
+  outline: none;
+  color: black;
 }
 
 span, ul {
-    margin: 0;
+  margin: 0;
 }
 
 span {
-    background: #e74c3c;
-    height: 100%;
-    width: 0;
-    opacity: 0;
-    text-align: center;
-    color: white;
-    display: inline-block;
-    transition: 0.15s linear;
-    padding: 0.35em;
-    border-radius: 20%;
+  background: #e74c3c;
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  text-align: center;
+  color: white;
+  display: inline-block;
+  transition: 0.15s linear;
+  padding: 0.35em;
+  border-radius: 20%;
 }
 
 li:hover span {
-    width: 1.5em;
-    opacity: 1.0;
+  width: 1.5em;
+  opacity: 1.0;
 }
 
 ul {
-    padding: 0;
+  padding: 0;
 }
 
 li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.6em 0.6em 0.6em 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6em 0.6em 0.6em 1em;
 }
 
 li:nth-child(2n) {
-    background-color: #e9e9e9;
+  background-color: #e9e9e9;
 }
 
 .strikeThrough {
-    text-decoration: line-through;
-    font-style: italic;
-    color: green;
+  text-decoration: line-through;
+  font-style: italic;
+  color: green;
 }
