@@ -1,6 +1,6 @@
 "use strict";
 
-(function() {
+(function () {
 
     window.addEventListener('load', init);
 
@@ -10,9 +10,9 @@
         id("addSign").addEventListener("click", addToDo);
     }
 
-    function addToDo(event){
-        if(event.key === "Enter" ||
-            (event.type === "click" && event.target.id === "addSign")){
+    function addToDo(event) {
+        if (event.key === "Enter" ||
+            (event.type === "click" && event.target.id === "addSign")) {
             const newItem = input.value;
             resetTextBox();
             let list = id("list");
@@ -20,14 +20,14 @@
             li.innerText = newItem;
             li.append(genTrashIcon());
             list.appendChild(li);
-            li.addEventListener("click", function() {
+            li.addEventListener("click", function () {
                 this.classList.toggle("strikeThrough");
             })
         }
     }
 
     function resetTextBox() {
-        input.value="";
+        input.value = "";
         input.placeholder = "Add Another TO-DO";
     }
 
@@ -37,7 +37,7 @@
         icon.classList.add("fas", "fa-trash-alt")
         icon.id = "trash";
         span.append(icon);
-        span.addEventListener("click", function() {
+        span.addEventListener("click", function () {
             this.parentElement.remove();
         })
         return span;
@@ -47,9 +47,11 @@
     function id(idName) {
         return document.getElementById(idName);
     }
+
     function qs(selector) {
         return document.querySelector(selector);
     }
+
     function qsa(selector) {
         return document.querySelectorAll(selector);
     }
@@ -64,4 +66,3 @@
     }
 
 })();
-

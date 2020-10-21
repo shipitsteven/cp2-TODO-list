@@ -14,7 +14,7 @@ h1 {
     color: white;
 }
 
-#addSign{
+#addSign {
     margin-top: 5px;
 }
 
@@ -31,10 +31,10 @@ input {
     box-sizing: border-box;
     padding: 15px;
     width: 100%;
-    border: 3px solid rgba(0,0,0,0);
+    border: 3px solid rgba(0, 0, 0, 0);
 }
 
-input:focus{
+input:focus {
     background: white;
     border: 3px solid #2980b9;
     outline: none;
@@ -74,7 +74,7 @@ li {
     padding: 0.6em 0.6em 0.6em 1em;
 }
 
-li:nth-child(2n){
+li:nth-child(2n) {
     background-color: #e9e9e9;
 }
 
