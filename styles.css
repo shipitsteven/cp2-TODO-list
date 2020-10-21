@@ -1,3 +1,12 @@
+/*
+ * Name: Steven Wang
+ * Date: October 21, 2020
+ * Section: CSE 154 AF
+ *
+ * This is the CSS page for my simple To-Do list app. It includes all styling
+ * for the page.
+ */
+
 body {
   font-family: 'Open Sans', sans-serif;
   background: #ffe0c0;
@@ -14,8 +23,8 @@ h1 {
   color: white;
 }
 
-#addSign {
-  margin-top: 5px;
+#add-sign:hover, ul span:hover {
+  cursor: pointer;
 }
 
 #container {
@@ -45,7 +54,7 @@ span, ul {
   margin: 0;
 }
 
-span {
+ul span {
   background: #e74c3c;
   height: 100%;
   width: 0;
@@ -60,7 +69,7 @@ span {
 
 li:hover span {
   width: 1.5em;
-  opacity: 1.0;
+  opacity: 1;
 }
 
 ul {

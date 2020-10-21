@@ -1,59 +1,80 @@
+/*
+ * Name: Steven Wang
+ * Date: October 21, 2020
+ * Section: CSE 154 AF
+ *
+ * This is the JS to facilitate the behavior of my TO-DO list app.
+ */
+
 "use strict";
 
 (function () {
 
   window.addEventListener('load', init);
 
+  /**
+   * Adding listener when the page loads
+   */
   function init() {
-    const input = id("input");
-    input.addEventListener("keypress", addToDo);
-    id("addSign").addEventListener("click", addToDo);
+    id("input").addEventListener("keypress", addToDo);
+    id("add-sign").addEventListener("click", addToDo);
   }
 
+  /**
+   * Add new item to the list, checks for empty string
+   * @param {MyEvent} event Keyboard event or mouse event
+   * @listens MyEvent
+   */
   function addToDo(event) {
     if (event.key === "Enter" ||
-      (event.type === "click" && event.target.id === "addSign")) {
-      const newItem = input.value;
-      resetTextBox();
-      let list = id("list");
-      let li = gen("li");
-      li.innerText = newItem;
-      li.append(genTrashIcon());
-      list.appendChild(li);
-      li.addEventListener("click", function () {
-        this.classList.toggle("strikeThrough");
-      })
+      (event.type === "click" && event.target.id === "add-sign")) {
+      let newItem = id("input").value;
+      if (newItem !== "") {
+        resetTextBox();
+        let list = id("list");
+        let li = gen("li");
+        li.innerText = newItem;
+        li.append(genTrashIcon());
+        list.appendChild(li);
+        li.addEventListener("click", function () {
+          this.classList.toggle("strikeThrough");
+        })
+      } else {
+        alert("Input cannot be empty.");
+      }
     }
   }
 
+  /**
+   * Resets the text input area to default state
+   */
   function resetTextBox() {
+    let input = id("input").value;
     input.value = "";
     input.placeholder = "Add Another TO-DO";
   }
 
+  /**
+   * adds X to the list that acts as delete button
+   * It used to be an icon, but i tag is banned, so function name is preserved
+   * @return {object} HTML span element
+   */
   function genTrashIcon() {
-    const span = gen("span");
-    const icon = gen("i")
-    icon.classList.add("fas", "fa-trash-alt")
-    icon.id = "trash";
-    span.append(icon);
+    let span = gen("span");
+    span.innerText = "X";
     span.addEventListener("click", function () {
       this.parentElement.remove();
     })
     return span;
   }
 
-
+  /**
+   * Returns a new element with the given id
+   * @param {string} idName HTML id for the desired DOM element.
+   * @return {object} DOM element with the corresponding HTML ID.
+   */
   function id(idName) {
     return document.getElementById(idName);
-  }
-
-  function qs(selector) {
-    return document.querySelector(selector);
-  }
-
-  function qsa(selector) {
-    return document.querySelectorAll(selector);
   }
 
   /**
