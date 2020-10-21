@@ -40,7 +40,7 @@
         });
         list.appendChild(li);
       } else {
-        id("input").placeholder = "Item cannot be empty."
+        id("input").placeholder = "Item cannot be empty.";
       }
     }
   }
