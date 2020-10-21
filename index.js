@@ -8,7 +8,7 @@
 
 "use strict";
 
-(function () {
+(function() {
 
   window.addEventListener('load', init);
 
@@ -30,17 +30,17 @@
       (event.type === "click" && event.target.id === "add-sign")) {
       let newItem = id("input").value;
       if (newItem !== "") {
-        resetTextBox();
         let list = id("list");
         let li = gen("li");
         li.innerText = newItem;
+        resetTextBox();
         li.append(genTrashIcon());
-        list.appendChild(li);
-        li.addEventListener("click", function () {
+        li.addEventListener("click", function() {
           this.classList.toggle("strikeThrough");
-        })
+        });
+        list.appendChild(li);
       } else {
-        alert("Input cannot be empty.");
+        input.placeholder = "Item cannot be empty."
       }
     }
   }
@@ -49,7 +49,6 @@
    * Resets the text input area to default state
    */
   function resetTextBox() {
-    let input = id("input").value;
     input.value = "";
     input.placeholder = "Add Another TO-DO";
   }
@@ -64,7 +63,7 @@
     span.innerText = "X";
     span.addEventListener("click", function () {
       this.parentElement.remove();
-    })
+    });
     return span;
   }
 
