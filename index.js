@@ -6,7 +6,7 @@
 
     function init() {
         const input = id("input");
-        id("input").addEventListener("keypress", addToDo);
+        input.addEventListener("keypress", addToDo);
         id("addSign").addEventListener("click", addToDo);
     }
 
@@ -20,6 +20,9 @@
             li.innerText = newItem;
             li.append(genTrashIcon());
             list.appendChild(li);
+            li.addEventListener("click", function() {
+                this.classList.toggle("strikeThrough");
+            })
         }
     }
 
@@ -32,7 +35,11 @@
         const span = gen("span");
         const icon = gen("i")
         icon.classList.add("fas", "fa-trash-alt")
+        icon.id = "trash";
         span.append(icon);
+        span.addEventListener("click", function() {
+            this.parentElement.remove();
+        })
         return span;
     }
 
