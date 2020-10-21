@@ -40,7 +40,7 @@
         });
         list.appendChild(li);
       } else {
-        input.placeholder = "Item cannot be empty."
+        id("input").placeholder = "Item cannot be empty."
       }
     }
   }
@@ -49,8 +49,8 @@
    * Resets the text input area to default state
    */
   function resetTextBox() {
-    input.value = "";
-    input.placeholder = "Add Another TO-DO";
+    id("input").value = "";
+    id("input").placeholder = "Add Another TO-DO";
   }
 
   /**
@@ -61,7 +61,7 @@
   function genTrashIcon() {
     let span = gen("span");
     span.innerText = "X";
-    span.addEventListener("click", function () {
+    span.addEventListener("click", function() {
       this.parentElement.remove();
     });
     return span;
